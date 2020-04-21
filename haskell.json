@@ -1,0 +1,73 @@
+{
+  "Typeclass declaration": {
+    "prefix": "class",
+    "body": [
+      "class ${1:TypeclassName} ${2:a} where",
+      "\t$3"
+    ],
+    "description": "Create new typeclass"
+  },
+  "Typeclass instance declaration": {
+    "prefix": "instance",
+    "body": [
+      "instance ${1:TypeclassName} ${2:Type} where",
+      "\t${3:function} = ${4:undefined}"
+    ],
+    "description": "Create typeclass instance"
+  },
+  "Case statement": {
+    "prefix": "case",
+    "body": [
+      "case ${1:value} of",
+      "\t${2:_} -> ${3:_}",
+      "\t$0"
+    ],
+    "description": "Create case statement"
+  },
+  "Language pragma": {
+    "prefix": "lang",
+    "body": [
+      "{-# language ${1:ExtentionName} #-}",
+    ],
+    "description": "Add language pragma"
+  },
+  "Options GHC": {
+    "prefix": "opts",
+    "body": [
+      "{-# options_ghc -${1:pragma} #-}",
+    ],
+    "description": "Add options ghc pragma"
+  },
+  "Import (normal)": {
+    "prefix": "imp",
+    "body": [
+      "import ${1:Dependency} (${2:function})",
+    ],
+    "description": "Add import declaration"
+  },
+  "Import qualified": {
+    "prefix": "impq",
+    "body": [
+      "import qualified ${1:Dependency} as ${2:Alias}",
+    ],
+    "description": "Add import qualified"
+  },
+  "New module": {
+    "prefix": "mod",
+    "body": [
+      "module ${1:Main} where\n",
+      "$0"
+    ],
+    "description": "Create new module"
+  },
+  "Main function": {
+    "prefix": "main",
+    "body": [
+      "main :: IO ()",
+      "main = do",
+      "\tputStrLn \"${1:whatever}\"",
+      "\t$0"
+    ],
+    "description": "Create new module"
+  },
+}
